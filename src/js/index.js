@@ -1,4 +1,5 @@
 //import react into the bundle
+import { doc } from "prettier";
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -6,7 +7,26 @@ import ReactDOM from "react-dom";
 import "../styles/index.css";
 
 //import your own components
-import Home from "./component/home.jsx";
+import Counter from "./component/Counter";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+
+let seconds = 0;
+let component;
+
+const increaseSeconds = () => seconds++;
+
+const renderingHandler = () => {
+	increaseSeconds();
+	component = (
+		<div className="app">
+			<span>
+				<i class="fa-regular fa-clock"></i>
+			</span>
+
+			<Counter seconds={seconds} />
+		</div>
+	);
+	ReactDOM.render(component, document.querySelector("#app"));
+};
+let startInterval = setInterval(renderingHandler, 1000);

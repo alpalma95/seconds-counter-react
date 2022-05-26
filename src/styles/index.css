@@ -1,12 +1,32 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .app {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 3vw;
+    display: flex;
+    gap: 1rem;
+    background-color: black;
+    width: fit-content;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+  .counter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  span {
 
-/* 
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 1rem;
+    display: grid;
+    place-content: center;
+    color: white;
+    background-color: #292828;
+  }
+  
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
